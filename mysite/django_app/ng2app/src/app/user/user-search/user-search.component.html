@@ -1,0 +1,37 @@
+<p>ユーザ検索画面</p>
+
+
+<form>
+
+
+    <div class="form-group">
+        <label for="lblName">ユーザ名</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="input_txt">
+    </div>
+    <button (click)="selectButton()" type="submit" class="btn btn-primary">検索</button>
+
+    <ag-grid-angular style="width: 1000px; height: 150px;" class="ag-theme-balham" [rowData]="rowData" [columnDefs]="columnDefs">
+    </ag-grid-angular>
+
+    <div class="form-group">
+        <label for="lblName">登録フォーム</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model.name">
+    </div>
+    <button (click)="register()" type="submit" class="btn btn-primary">登録</button>
+
+    <ol>
+        <li>
+            <mat-form-field>
+                <mat-label>What's your name?</mat-label>
+                <input matInput [(ngModel)]="name">
+            </mat-form-field>
+        </li>
+        <li>
+            <button mat-raised-button (click)="openDialog()">Pick one</button>
+        </li>
+        <li *ngIf="animal">
+            You chose: <i>{{animal}}</i>
+        </li>
+    </ol>
+
+</form>

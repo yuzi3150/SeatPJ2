@@ -1,0 +1,99 @@
+body{
+  font-family:'メイリオ', 'Meiryo', sans-serif;
+}
+.table {
+  width: 100px;
+}
+.table td{
+  border-top: none;
+}
+
+.input_name {
+  text-align:center;
+  font-size: 75%;
+}
+button {
+  text-align:center;
+  font-size: 75%;
+  width: 100px;
+}
+
+td{
+    padding: 0px;
+    writing-mode: initial;
+}
+td input{
+  height:60px;
+}
+
+/** 社員の座席*/
+.employee_seat td{
+  border-top: none;
+}
+
+/** 座席あり*/
+.seat_ari{
+  background-color: white;
+  width: 30px;
+  border:0.5px solid #222;  
+}
+.seat_ari:hover{
+  background-color: lightskyblue;
+
+}
+
+/** 座席無し*/
+.seat_nashi{
+  width: 15px;
+  border: none;
+  box-lines: none;
+}
+/** 座席あるけど座るの禁止*/
+.ng_seat_ari{
+  background-color: silver;
+  width: 30px;
+  border:0.5px solid #222;  
+}
+
+/** 事業部スタイル*/
+.division{
+  height: 30px;
+}
+.division td{
+  text-align: center;
+  vertical-align: middle;
+  text-align: center;
+  vertical-align: middle;
+}
+.ep_kikaku{
+  background-color: violet;
+}
+.ba_jigyobu{
+  background-color: sandybrown;
+}
+
+/** 重役席(一番上座)*/
+.executive_tr{
+  height:60px;
+  text-align: center;
+  vertical-align: middle;
+}
+.executive_tr td{
+  /* border:none; */
+}
+.executive_td{
+  text-align: center;
+  vertical-align: middle;
+  border:1px solid #222;
+}
+
+/** 事業部名*/
+.group_name{
+  height:30px;
+}
+.group_name td{
+  font-size: 75%;
+  text-align: center;
+  vertical-align: bottom;
+  color: red;
+}

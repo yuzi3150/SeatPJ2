@@ -1,0 +1,19 @@
+Python 開発用サーバー
+python manage.py runserver
+
+angular サーバの立ち上げ
+ng serve
+
+Djangoの機能を使ってマイグレーションします
+python manage.py makemigrations
+python manage.py migrate
+※ただし、上記のコマンドを実行する前は、django_app直下のurls.pyの
+　エラー個所をコメントアウトすること
+
+
+>C:\Users\Administrator\Documents\030_kana_study\010_work\04_django\mysite\django_app> で
+python manage.py makemigrations django_app/seatregistration
+
+
+Djangoアプリ作成コマンド
+python manage.py startapp seat_module

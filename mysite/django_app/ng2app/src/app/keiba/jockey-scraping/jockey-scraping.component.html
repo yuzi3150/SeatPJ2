@@ -1,0 +1,25 @@
+<p>騎手データ収集</p>
+<form [formGroup]="form">
+    <div class="form-group">
+        <p>検索ID</p>
+        <mat-form-field>
+            <mat-label>NNNNN</mat-label>
+            <input matInput class="form-control" [formControl]="inputIdFrom">
+        </mat-form-field>
+        <p>～</p>
+        <mat-form-field>
+            <mat-label>NNNNN</mat-label>
+            <input matInput class="form-control" [formControl]="inputIdTo">
+        </mat-form-field>
+
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>ダウンロード先URL</mat-label>
+            <input matInput class="form-control"  [formControl]="dlPath">
+        </mat-form-field>
+
+        <div class="example-button-row">
+            <button mat-button color="primary" (click)="getData()">取得</button>
+        </div>
+    </div>
+</form>

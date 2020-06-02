@@ -1,0 +1,38 @@
+<p>開催レース一覧</p>
+<form [formGroup]="form">
+    <div class="form-group">
+        <mat-form-field>
+            <mat-label>開催日</mat-label>
+            <input matInput [matDatepicker]="picker1" class="form-control" [formControl]="inputRaceDate" (blur)="getRaceList()">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+    </div>
+    <div>
+        <p>{{raceTitle1}}</p>
+        <p>{{shiba1}}</p>
+        <p>{{da1}}</p>
+    </div>
+    <div>
+        <ag-grid-angular style="width: 100%; height: 150px;" class="ag-theme-balham" [rowData]="rowData" [columnDefs]="columnDefs">
+        </ag-grid-angular>
+    </div>
+    <div>
+        <p>{{raceTitle2}}</p>
+        <p>{{shiba2}}</p>
+        <p>{{da2}}</p>
+    </div>
+    <div>
+        <ag-grid-angular style="width: 100%; height: 150px;" class="ag-theme-balham" [rowData]="rowData2" [columnDefs]="columnDefs">
+        </ag-grid-angular>
+    </div>
+    <div>
+        <p>{{raceTitle2}}</p>
+        <p>{{shiba2}}</p>
+        <p>{{da2}}</p>
+    </div>
+    <div>
+        <ag-grid-angular style="width: 100%; height: 150px;" class="ag-theme-balham" [rowData]="rowData3" [columnDefs]="columnDefs">
+        </ag-grid-angular>
+    </div>
+</form>

@@ -1,0 +1,14 @@
+{{itemLink}}
+<div>
+    <p>{{raceTitle}}</p>
+    <p>天気:{{weather}}</p>
+    <p>芝:{{shiba}}</p>
+    <p>ダ:{{da}}</p>
+</div>
+
+<form [formGroup]="form">
+    <div>
+        <ag-grid-angular style="width: 100%; height: 500px;" class="ag-theme-balham" [rowData]="rowData" [columnDefs]="columnDefs">
+        </ag-grid-angular>
+    </div>
+</form>

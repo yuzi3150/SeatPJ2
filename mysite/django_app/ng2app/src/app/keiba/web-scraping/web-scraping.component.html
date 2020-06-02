@@ -1,0 +1,30 @@
+<p>データ収集</p>
+<form [formGroup]="form">
+    <div class="form-group">
+        <p>検索期間</p>
+        <mat-form-field>
+            <mat-label>MM/DD/YYYY</mat-label>
+            <input matInput [matDatepicker]="picker1" class="form-control"  [formControl]="inputDateFrom">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+        <p>～</p>
+        <mat-form-field>
+            <mat-label>MM/DD/YYYY</mat-label>
+            <input matInput [matDatepicker]="picker2" class="form-control" [formControl]="inputDateTo">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+
+        <br>
+        <mat-form-field class="example-full-width" >
+            <mat-label>ダウンロード先URL</mat-label>
+            <input matInput class="form-control" formControlName="dlPath"  [formControl]="dlPath"
+            >
+        </mat-form-field>
+
+        <div class="example-button-row">
+            <button mat-button color="primary" (click)="getData()">取得</button>
+        </div>
+    </div>
+</form>
